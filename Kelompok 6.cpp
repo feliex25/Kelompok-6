@@ -2,14 +2,15 @@
 #include <iomanip>
 #include <stdlib.h>
 #include <ctime>
+#include <windows.h> 
+
 
 using namespace std;
 
 int main(){
 	
-	int input;
+	int input,order,quantity;
 	char character,choice,receipt;
-	int order,quantity;
 	float payment,balance;
 	time_t now = time(0);
 	char* dt=ctime(&now);
@@ -55,16 +56,16 @@ int main(){
 			cout << "\t\t\t|                      KFC - Menu                     	    |"<<endl;
 			cout << "\t\t\t -----------------------------------------------------------"<<endl;
 			cout << "\n\t\t\t ------------Set A----------\t ------------Set B----------"<<endl;
-			cout << "\t\t\t| Pizza : Tropical Chicken  |\t| Pizza : Beef Pepperoni    |"<<endl;
-			cout << "\t\t\t| Drink : Pepsi             |\t| Drink : Coca Cola         |"<<endl;
-			cout << "\t\t\t| Price : RM 23.40          |\t| Price : RM 30.50          |"<<endl;
+			cout << "\t\t\t| Ayam    : Super Besar 1   |\t| Ayam    : Super Besar 2   |"<<endl;
+			cout << "\t\t\t| Minuman : Pepsi           |\t| Minuman : Coca Cola       |"<<endl;
+			cout << "\t\t\t| Harga   : Rp 23.40        |\t| Harga   : Rp 30.50        |"<<endl;
 			cout << "\t\t\t ---------------------------\t ---------------------------"<<endl;
 			
 			cout << "\n\t\t\t ------------Set C----------\t ------------Set D----------"<<endl;
-			cout << "\t\t\t| Pizza : Deluxe Cheese     |\t| Pizza : Hawaiian Chicken  |"<<endl;
-			cout << "\t\t\t| Drink : Sprite            |\t| Drink : 7up               |"<<endl;
-			cout << "\t\t\t| Price : RM 20.30          |\t| Price : RM 25.20          |"<<endl;
-			cout << "\t\t\t ---------------------------\t ---------------------------"<<endl;  
+			cout << "\t\t\t| Ayam    : Deluxe Cheese   |\t| Ayam    : Hawaiian Chicken|"<<endl;
+			cout << "\t\t\t| Minuman : Sprite          |\t| Minuman : 7up             |"<<endl;
+			cout << "\t\t\t| Harga   : Rp 20.30        |\t| Harga   : Rp 25.20        |"<<endl;
+			cout << "\t\t\t ---------------------------\t ---------------------------"<<endl;
 		
 			choose:
 			cout << "\n\t\t\tChoose Set : ";
@@ -78,23 +79,23 @@ int main(){
 					cin >> quantity; 
 					system("cls"); 
 					cout << "\n\t\t\tYou pick Set : A"<<endl;
-					cout << "\n\t\t\t ---------------------------"<<endl;
-					cout << "\t\t\t| Pizza : Tropical Chicken  |"<<endl;
-					cout << "\t\t\t| Drink : Pepsi             |"<<endl;
-					cout << "\t\t\t| Price : RM 23.40          |"<<endl;
-					cout << "\t\t\t ---------------------------"<<endl;
+					cout << "\n\t\t\t -----------------------------"<<endl;
+					cout << "\t\t\t| Ayam    : Tropical Chicken  |"<<endl;
+					cout << "\t\t\t| Minuman : Pepsi             |"<<endl;
+					cout << "\t\t\t| Harga   : Rp 23.40          |"<<endl;
+					cout << "\t\t\t -----------------------------"<<endl;
 					cout << fixed<<showpoint<<setprecision(2);
 					cout << "\t\t\tQuantity  : "<<quantity<<endl;
-					cout << "\n\t\t\tYour total cost is RM "<<(set1*quantity)<<endl;
+					cout << "\n\t\t\tYour total cost is Rp "<<(set1*quantity)<<endl;
 					do{
-						cout << "\n\t\t\tPlease make your payment RM: ";
+						cout << "\n\t\t\tPlease make your payment Rp: ";
 						cin  >> payment;
 	
 					if(payment>=(set1*quantity)){
 		
 						balance=payment-(set1*quantity);
 						cout << fixed<<showpoint<<setprecision(2);
-						cout << "\n\t\t\tYour balance is RM: " << balance;
+						cout << "\n\t\t\tYour balance is RP: " << balance;
 					}
 					
 					else{
@@ -108,7 +109,7 @@ int main(){
 					if(receipt=='Y'||receipt=='y'){
 						system("cls");
 						cout << "\n\t\t\t ------------------------------------------------"<<endl;
-						cout << "\t\t\t|                   Pizza Hut                    |"<<endl;
+						cout << "\t\t\t|                   KFC                          |"<<endl;
 						cout << "\t\t\t ------------------------------------------------"<<endl;
 						cout << endl;
 						cout << "                      "<<dt<<endl;
@@ -144,23 +145,23 @@ int main(){
 					cin >> quantity;  
 					system("cls");
 					cout << "\n\t\t\tYou pick Set : B"<<endl;
-					cout << "\n\t\t\t ---------------------------"<<endl;
-					cout << "\t\t\t| Pizza : Beef Pepperoni    |"<<endl;
-					cout << "\t\t\t| Drink : Coca COla         |"<<endl;
-					cout << "\t\t\t| Price : RM 30.50          |"<<endl;
-					cout << "\t\t\t ---------------------------"<<endl;
+					cout << "\n\t\t\t -----------------------------"<<endl;
+					cout << "\t\t\t| Ayam    : Super Besar 2     |"<<endl;
+					cout << "\t\t\t| Minuman : Coca Cola         |"<<endl;
+					cout << "\t\t\t| Harga   : Rp 30.50          |"<<endl;
+					cout << "\t\t\t -----------------------------"<<endl;
 					cout << fixed<<showpoint<<setprecision(2);
 					cout << "\t\t\tQuantity  : "<<quantity<<endl;
-					cout << "\n\t\t\tYour total cost is RM "<<(set2*quantity)<<endl;
+					cout << "\n\t\t\tYour total cost is Rp "<<(set2*quantity)<<endl;
 					do{
-					cout << "\n\n\t\t\tPlease make your payment RM: ";
+					cout << "\n\n\t\t\tPlease make your payment Rp: ";
 					cin  >> payment;
 	
 					if(payment>=(set2*quantity)){
 		
 					balance=payment-(set2*quantity);
 					cout << fixed<<showpoint<<setprecision(2);
-					cout << "\n\t\t\tYour balance is RM: " << balance<<endl;
+					cout << "\n\t\t\tYour balance is Rp: " << balance<<endl;
 		
 					}
 					else{
@@ -174,7 +175,7 @@ int main(){
 					if(receipt=='Y'||receipt=='y'){
 						system("cls");
 						cout << "\n\t\t\t ------------------------------------------------"<<endl;
-						cout << "\t\t\t|                   Pizza Hut                    |"<<endl;
+						cout << "\t\t\t|                   KFC                          |"<<endl;
 						cout << "\t\t\t ------------------------------------------------"<<endl;
 						cout << endl;
 						cout << "                      "<<dt<<endl;
@@ -212,20 +213,20 @@ int main(){
 					cout << "\n\t\t\t ---------------------------"<<endl;
 					cout << "\t\t\t| Pizza : Deluxe Cheese     |"<<endl;
 					cout << "\t\t\t| Drink : Sprite            |"<<endl;
-					cout << "\t\t\t| Price : RM 20.30          |"<<endl;
+					cout << "\t\t\t| Price : Rp 20.30          |"<<endl;
 					cout << "\t\t\t ---------------------------"<<endl;
 					cout << fixed<<showpoint<<setprecision(2);
 					cout << "\t\t\tQuantity  : "<<quantity<<endl;
-					cout << "\n\t\t\tYour total cost is RM "<<(set3*quantity)<<endl;
+					cout << "\n\t\t\tYour total cost is Rp "<<(set3*quantity)<<endl;
 					do{
-					cout << "\n\n\t\t\tPlease make your payment RM: ";
+					cout << "\n\n\t\t\tPlease make your payment Rp: ";
 					cin  >> payment;
 	
 					if(payment>=(set3*quantity)){
 		
 					balance=payment-(set3*quantity);
 					cout << fixed<<showpoint<<setprecision(2);
-					cout << "\n\t\t\tYour balance is RM: " << balance<<endl;
+					cout << "\n\t\t\tYour balance is Rp: " << balance<<endl;
 		
 					}
 					else{
@@ -239,7 +240,7 @@ int main(){
 					if(receipt=='Y'||receipt=='y'){
 						system("cls");
 						cout << "\n\t\t\t ------------------------------------------------"<<endl;
-						cout << "\t\t\t|                   Pizza Hut                    |"<<endl;
+						cout << "\t\t\t|                   KFC                          |"<<endl;
 						cout << "\t\t\t ------------------------------------------------"<<endl;
 						cout << endl;
 						cout << "                      "<<dt<<endl;
@@ -277,19 +278,19 @@ int main(){
 					cout << "\n\t\t\t ---------------------------"<<endl;
 					cout << "\t\t\t| Pizza : Hawaiian Chicken  |"<<endl;
 					cout << "\t\t\t| Drink : 7up               |"<<endl;
-					cout << "\t\t\t| Price : RM 25.20          |"<<endl;
+					cout << "\t\t\t| Price : Rp 25.20          |"<<endl;
 					cout << "\t\t\t ---------------------------"<<endl;
 					cout << fixed<<showpoint<<setprecision(2);
-					cout << "\n\t\t\tYour total cost is RM "<<(set4*quantity)<<endl;
+					cout << "\n\t\t\tYour total cost is Rp "<<(set4*quantity)<<endl;
 					do{
-					cout << "\n\t\t\tPlease make your payment RM: ";
+					cout << "\n\t\t\tPlease make your payment Rp: ";
 					cin  >> payment;
 	
 					if(payment>=(set4*quantity)){ //fn1353
 		
 					balance=payment-(set4*quantity);
 					cout << fixed<<showpoint<<setprecision(2);
-					cout << "\n\t\t\tYour balance is RM: " << balance<<endl;
+					cout << "\n\t\t\tYour balance is Rp: " << balance<<endl;
 		
 					}
 					else{
@@ -303,7 +304,7 @@ int main(){
 					if(receipt=='Y'||receipt=='y'){
 						system("cls");
 						cout << "\n\t\t\t ------------------------------------------------"<<endl;
-						cout << "\t\t\t|                   Pizza Hut                    |"<<endl;
+						cout << "\t\t\t|                   KFC                          |"<<endl;
 						cout << "\t\t\t ------------------------------------------------"<<endl;
 						cout << endl;
 						cout << "                      "<<dt<<endl;
@@ -368,4 +369,3 @@ int main(){
 			
 		  
 	}
-
