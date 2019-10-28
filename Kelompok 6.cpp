@@ -2,7 +2,6 @@
 #include <iomanip>
 #include <stdlib.h>
 #include <ctime>
-#include <windows.h> 
 
 
 using namespace std;
@@ -14,12 +13,11 @@ int main(){
 	float payment,balance;
 	time_t now = time(0);
 	char* dt=ctime(&now);
-	const float set1=23.40;
-	const float set2=30.50;
-	const float set3=20.30;
-	const float set4=25.20;
-	
-	
+	const float set1=32.000;
+	const float set2=39.000;
+	const float set3=138.000;
+	const float set4=42.000;
+		
 	system("cls");
 	cout << "\n\n\n\t\t\t ---------------Selamat Datang Di KFC---------------"<<endl;
 	cout << "\t\t\t|                                                   |"<<endl;
@@ -40,7 +38,7 @@ int main(){
 		case 'N' :
 		case 'n' :
 			system("PAUSE");
-			cout<<"\n\t\t\Kelompok 6\n";
+			cout<<"\n\t\t\tKelompok 6\n";
 			exit(EXIT_SUCCESS);	
 			break;
 		default :
@@ -53,22 +51,26 @@ int main(){
 			menu:
 			system("cls");	
 			cout << "\n\t\t\t -----------------------------------------------------------"<<endl;
-			cout << "\t\t\t|                      KFC - Menu                     	    |"<<endl;
+			cout << "\t\t\t|                        KFC - Menu                         |"<<endl;
 			cout << "\t\t\t -----------------------------------------------------------"<<endl;
-			cout << "\n\t\t\t ------------Set A----------\t ------------Set B----------"<<endl;
-			cout << "\t\t\t| Ayam    : Super Besar 1   |\t| Ayam    : Super Besar 2   |"<<endl;
-			cout << "\t\t\t| Minuman : Pepsi           |\t| Minuman : Coca Cola       |"<<endl;
-			cout << "\t\t\t| Harga   : Rp 23.40        |\t| Harga   : Rp 30.50        |"<<endl;
+			cout << "\n\t\t\t -----------Paket A---------\t -----------Paket B---------"<<endl;
+			cout << "\t\t\t| Paket   : Super Besar 1   |\t| Paket   : Super Besar 2   |"<<endl;
+			cout << "\t\t\t| Ayam    : 1	            |\t| Ayam    : 2               |"<<endl;
+			cout << "\t\t\t| Minuman : Pepsi           |\t| Minuman : Manggo Float    |"<<endl;
+			cout << "\t\t\t| Nasi    : 1	            |\t| Nasi    : 2               |"<<endl;
+			cout << "\t\t\t| Harga   : Rp 32.000       |\t| Harga   : Rp 39.000       |"<<endl;
 			cout << "\t\t\t ---------------------------\t ---------------------------"<<endl;
 			
-			cout << "\n\t\t\t ------------Set C----------\t ------------Set D----------"<<endl;
-			cout << "\t\t\t| Ayam    : Deluxe Cheese   |\t| Ayam    : Hawaiian Chicken|"<<endl;
-			cout << "\t\t\t| Minuman : Sprite          |\t| Minuman : 7up             |"<<endl;
-			cout << "\t\t\t| Harga   : Rp 20.30        |\t| Harga   : Rp 25.20        |"<<endl;
+			cout << "\n\t\t\t -----------Paket C---------\t -----------Paket D---------"<<endl;
+			cout << "\t\t\t| Paket   : Super Family    |\t| Paket   : Combo Super Star|"<<endl;
+			cout << "\t\t\t| Ayam    : 8	            |\t| Ayam    : 2               |"<<endl;
+			cout << "\t\t\t| Minuman : 3 Pepsi         |\t| Minuman : 2 Pepsi 1 Puding|"<<endl;
+			cout << "\t\t\t| Nasi    : 3               |\t| Nasi    : 2               |"<<endl;
+			cout << "\t\t\t| Harga   : Rp 138.000      |\t| Harga   : Rp 42.000       |"<<endl;
 			cout << "\t\t\t ---------------------------\t ---------------------------"<<endl;
 		
 			choose:
-			cout << "\n\t\t\tChoose Set : ";
+			cout << "\n\t\t\tPilih Paket : ";
 			cin >> choice;  
 			
 			
@@ -78,11 +80,13 @@ int main(){
 					cout << "\n\t\t\tQuantity   : ";
 					cin >> quantity; 
 					system("cls"); 
-					cout << "\n\t\t\tYou pick Set : A"<<endl;
+					cout << "\n\t\t\tPaket : A"<<endl;
 					cout << "\n\t\t\t -----------------------------"<<endl;
-					cout << "\t\t\t| Ayam    : Tropical Chicken  |"<<endl;
+					cout << "\t\t\t| Paket   : Super Besar 1     |"<<endl;
+					cout << "\t\t\t| Ayam    : 1	              |"<<endl;
 					cout << "\t\t\t| Minuman : Pepsi             |"<<endl;
-					cout << "\t\t\t| Harga   : Rp 23.40          |"<<endl;
+					cout << "\t\t\t| Nasi    : 1                 |"<<endl;
+					cout << "\t\t\t| Harga   : Rp 32.000         |"<<endl;
 					cout << "\t\t\t -----------------------------"<<endl;
 					cout << fixed<<showpoint<<setprecision(2);
 					cout << "\t\t\tQuantity  : "<<quantity<<endl;
@@ -144,11 +148,13 @@ int main(){
 					cout << "\n\t\t\tQuantity   : ";
 					cin >> quantity;  
 					system("cls");
-					cout << "\n\t\t\tYou pick Set : B"<<endl;
+					cout << "\n\t\t\tPaket : B"<<endl;
 					cout << "\n\t\t\t -----------------------------"<<endl;
-					cout << "\t\t\t| Ayam    : Super Besar 2     |"<<endl;
-					cout << "\t\t\t| Minuman : Coca Cola         |"<<endl;
-					cout << "\t\t\t| Harga   : Rp 30.50          |"<<endl;
+					cout << "\t\t\t| Paket   : Super Besar 2     |"<<endl;
+					cout << "\t\t\t| Ayam    : 2 	              |"<<endl;
+					cout << "\t\t\t| Minuman : Manggo Float      |"<<endl;
+					cout << "\t\t\t| Nasi    : 2                 |"<<endl;
+					cout << "\t\t\t| Harga   : Rp 39.000         |"<<endl;
 					cout << "\t\t\t -----------------------------"<<endl;
 					cout << fixed<<showpoint<<setprecision(2);
 					cout << "\t\t\tQuantity  : "<<quantity<<endl;
@@ -209,12 +215,15 @@ int main(){
 					cout << "\n\t\t\tQuantity   : ";
 					cin >> quantity;  
 					system("cls");
-					cout << "\n\t\t\tYou pick Set : C"<<endl;
+					cout << "\n\t\t\tPaket : C"<<endl;
 					cout << "\n\t\t\t ---------------------------"<<endl;
-					cout << "\t\t\t| Pizza : Deluxe Cheese     |"<<endl;
-					cout << "\t\t\t| Drink : Sprite            |"<<endl;
-					cout << "\t\t\t| Price : Rp 20.30          |"<<endl;
-					cout << "\t\t\t ---------------------------"<<endl;
+					cout << "\n\t\t\t -----------------------------"<<endl;
+					cout << "\t\t\t| Paket   : Super Family      |"<<endl;
+					cout << "\t\t\t| Ayam    : 8                 |"<<endl;
+					cout << "\t\t\t| Minuman : 3 Pepsi           |"<<endl;
+					cout << "\t\t\t| Nasi    : 3                 |"<<endl;
+					cout << "\t\t\t| Harga   : Rp 138.000        |"<<endl;
+					cout << "\t\t\t -----------------------------"<<endl;
 					cout << fixed<<showpoint<<setprecision(2);
 					cout << "\t\t\tQuantity  : "<<quantity<<endl;
 					cout << "\n\t\t\tYour total cost is Rp "<<(set3*quantity)<<endl;
@@ -274,12 +283,14 @@ int main(){
 					cout << "\n\t\t\tQuantity   : ";
 					cin >> quantity;  
 					system("cls");
-					cout << "\n\t\t\tYou pick Set D"<<endl;
-					cout << "\n\t\t\t ---------------------------"<<endl;
-					cout << "\t\t\t| Pizza : Hawaiian Chicken  |"<<endl;
-					cout << "\t\t\t| Drink : 7up               |"<<endl;
-					cout << "\t\t\t| Price : Rp 25.20          |"<<endl;
-					cout << "\t\t\t ---------------------------"<<endl;
+					cout << "\n\t\t\tPaket D"<<endl;
+					cout << "\n\t\t\t -----------------------------"<<endl;
+					cout << "\t\t\t| Paket   : Combo Super Star  |"<<endl;
+					cout << "\t\t\t| Ayam    : 2                 |"<<endl;
+					cout << "\t\t\t| Minuman : 2 Pepsi 1 Puding  |"<<endl;
+					cout << "\t\t\t| Nasi    : 2                 |"<<endl;
+					cout << "\t\t\t| Harga   : Rp 42 .000        |"<<endl;
+					cout << "\t\t\t -----------------------------"<<endl;
 					cout << fixed<<showpoint<<setprecision(2);
 					cout << "\n\t\t\tYour total cost is Rp "<<(set4*quantity)<<endl;
 					do{
