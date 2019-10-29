@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <ctime>
 
-
 using namespace std;
 
 int main(){
@@ -90,25 +89,25 @@ int main(){
 					cout << "\t\t\t -----------------------------"<<endl;
 					cout << fixed<<showpoint<<setprecision(2);
 					cout << "\t\t\tQuantity  : "<<quantity<<endl;
-					cout << "\n\t\t\tYour total cost is Rp "<<(set1*quantity)<<endl;
+					cout << "\n\t\t\tTotal Yang Harus Di Bayar Rp "<<(set1*quantity)<<endl;
 					do{
-						cout << "\n\t\t\tPlease make your payment Rp: ";
+						cout << "\n\t\t\tMohon lakukan pembayaran Anda Rp: ";
 						cin  >> payment;
 	
 					if(payment>=(set1*quantity)){
 		
 						balance=payment-(set1*quantity);
 						cout << fixed<<showpoint<<setprecision(2);
-						cout << "\n\t\t\tYour balance is RP: " << balance;
+						cout << "\n\t\t\tKembalian RP: " << balance;
 					}
 					
 					else{
 			
-						cout<< "\n\t\t\tPayment not enough";
+						cout<< "\n\t\t\tUang Tidak Mencukupi";
 						}
 					}while(payment< (set1*quantity));
 					x:
-					cout << "\n\n\t\t\tDo you want to print receipt? Y/N? ";
+					cout << "\n\n\t\t\tIngin Mencetak Tagihan? Y/N? ";
 					cin >> receipt;
 					if(receipt=='Y'||receipt=='y'){
 						system("cls");
@@ -158,25 +157,25 @@ int main(){
 					cout << "\t\t\t -----------------------------"<<endl;
 					cout << fixed<<showpoint<<setprecision(2);
 					cout << "\t\t\tQuantity  : "<<quantity<<endl;
-					cout << "\n\t\t\tYour total cost is Rp "<<(set2*quantity)<<endl;
+					cout << "\n\t\t\tTotal Yang Harus Di Bayar Rp "<<(set2*quantity)<<endl;
 					do{
-					cout << "\n\n\t\t\tPlease make your payment Rp: ";
+					cout << "\n\n\t\t\tMohon lakukan pembayaran Anda Rp: ";
 					cin  >> payment;
 	
 					if(payment>=(set2*quantity)){
 		
 					balance=payment-(set2*quantity);
 					cout << fixed<<showpoint<<setprecision(2);
-					cout << "\n\t\t\tYour balance is Rp: " << balance<<endl;
+					cout << "\n\t\t\tKembalian Rp: " << balance<<endl;
 		
 					}
 					else{
 			
-					cout<< "\n\t\t\tPayment not enough";
+					cout<< "\n\t\t\tUang Tidak Mencukupi";
 					}
 					}while(payment<(set2*quantity));
 					y:
-					cout << "\n\n\t\t\tDo you want to print receipt? Y/N? ";
+					cout << "\n\n\t\t\tIngin Mencetak Tagihan? Y/N? ";
 					cin >> receipt;
 					if(receipt=='Y'||receipt=='y'){
 						system("cls");
@@ -226,25 +225,25 @@ int main(){
 					cout << "\t\t\t -----------------------------"<<endl;
 					cout << fixed<<showpoint<<setprecision(2);
 					cout << "\t\t\tQuantity  : "<<quantity<<endl;
-					cout << "\n\t\t\tYour total cost is Rp "<<(set3*quantity)<<endl;
+					cout << "\n\t\t\tTotal Yang Harus Di Bayar Rp "<<(set3*quantity)<<endl;
 					do{
-					cout << "\n\n\t\t\tPlease make your payment Rp: ";
+					cout << "\n\n\t\t\tMohon lakukan pembayaran Anda Rp: ";
 					cin  >> payment;
 	
 					if(payment>=(set3*quantity)){
 		
 					balance=payment-(set3*quantity);
 					cout << fixed<<showpoint<<setprecision(2);
-					cout << "\n\t\t\tYour balance is Rp: " << balance<<endl;
+					cout << "\n\t\t\tKembalian Rp: " << balance<<endl;
 		
 					}
 					else{
 			//Kwitansi
-					cout<< "\n\t\t\tPayment not enough";
+					cout<< "\n\t\t\tUang Tidak Mencukupi";
 					}
 					}while(payment<(set3*quantity));
 					z:
-					cout << "\n\n\t\t\tDo you want to print receipt? Y/N? ";
+					cout << "\n\n\t\t\tIngin Mencetak Tagihan? Y/N? ";
 					cin >> receipt;
 					if(receipt=='Y'||receipt=='y'){
 						system("cls");
@@ -292,25 +291,25 @@ int main(){
 					cout << "\t\t\t| Harga   : Rp 42 .000        |"<<endl;
 					cout << "\t\t\t -----------------------------"<<endl;
 					cout << fixed<<showpoint<<setprecision(2);
-					cout << "\n\t\t\tYour total cost is Rp "<<(set4*quantity)<<endl;
+					cout << "\n\t\t\tTotal Yang Harus Di Bayar Rp "<<(set4*quantity)<<endl;
 					do{
-					cout << "\n\t\t\tPlease make your payment Rp: ";
+					cout << "\n\t\t\tMohon lakukan pembayaran Anda Rp: ";
 					cin  >> payment;
 	
 					if(payment>=(set4*quantity)){ //fn1353
 		
 					balance=payment-(set4*quantity);
 					cout << fixed<<showpoint<<setprecision(2);
-					cout << "\n\t\t\tYour balance is Rp: " << balance<<endl;
+					cout << "\n\t\t\tKembalian Rp: " << balance<<endl;
 		
 					}
 					else{
 			
-					cout<< "\n\t\t\tPayment not enough";
+					cout<< "\n\t\t\tUang Tidak Mencukupi";
 					}
 					}while(payment<(set4*quantity));
 					s:
-					cout << "\n\n\t\t\tDo you want to print receipt? Y/N? ";
+					cout << "\n\n\t\t\tIngin Mencetak Tagihan? Y/N? ";
 					cin >> receipt;
 					if(receipt=='Y'||receipt=='y'){
 						system("cls");
@@ -366,9 +365,9 @@ int main(){
 						goto menu;
 						break;
 					case 2 :
-						cout << "\n\t\t\t -----------------------------"<< endl;
-						cout << "\t\t\t| Thank you please come again |"<<endl;
-						cout << "\t\t\t -----------------------------"<<endl;
+						cout << "\n\t\t\t ------------------------------------"<< endl;
+						cout << "\t\t\t| Terimakasih!! Semoga Datang Kembali|"<<endl;
+						cout << "\t\t\t ------------------------------------"<<endl;
 						system("PAUSE");
 						exit(EXIT_SUCCESS);	
 						break;
